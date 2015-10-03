@@ -1,5 +1,8 @@
 package android.fullsail.com.project_1;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.preference.DialogPreference;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -87,10 +90,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText findText = (EditText) findViewById(R.id.findEmployee);
 
-                String currentText;
-                int currentInt;
+                // Setup for user input
+                String currentText = findText.getText().toString();
+                int findInt = Integer.parseInt(currentText);
+
+                // Alert Dialog
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Employee")
+                        .setMessage(employeeArray.get(findInt).toUpperCase())
+                        .setCancelable(false)
+                        .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+
+                            }
+                        }).create().show();
             }
         });
+
+
+        // CUSTOM METHOD FOR AVERAGE LENGTH
 
 
 
