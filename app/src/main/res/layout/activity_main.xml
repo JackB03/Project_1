@@ -1,0 +1,84 @@
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:hint="Add Employee Name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentText"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="110dp"
+        android:inputType="text" />
+
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Add"
+         android:id="@+id/addButton"
+         android:layout_marginTop="0dp"
+         android:layout_marginLeft="255dp"
+         />
+
+     <TextView
+         android:text="Employees:"
+         android:id="@+id/employeeLbl"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="70dp"
+         android:layout_marginRight="110dp"
+         android:layout_marginLeft="5dp"
+         android:textSize="20sp"
+         android:textColor="#FF0000"
+         />
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/numberEmployee"
+         android:layout_marginTop="80dp"
+         android:layout_marginLeft="120dp"
+         android:textSize="20sp"
+         android:textColor="#000000"
+         />
+
+     <TextView
+         android:text="Average Length:"
+         android:id="@+id/averageLbl"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="140dp"
+         android:layout_marginRight="110dp"
+         android:layout_marginLeft="5dp"
+         android:textSize="20sp"
+         android:textColor="#FF0000"
+         />
+
+     <EditText
+         android:hint="Find Employee"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/findText"
+         android:layout_marginTop="200dp"
+         android:layout_marginRight="110dp"
+         android:inputType="text" />
+
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Find"
+         android:id="@+id/findButton"
+         android:layout_marginTop="200dp"
+         android:layout_marginLeft="255dp"
+         />
+
+
+
+
+</RelativeLayout>
