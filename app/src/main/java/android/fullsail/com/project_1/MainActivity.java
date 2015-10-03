@@ -24,14 +24,15 @@ public class MainActivity extends AppCompatActivity {
     // TAG
     String TAG = "Employee Project";
 
+    //Add to Array List for Employees
+    final ArrayList<String> employeeArray = new ArrayList<>();
 
-    @Override
+
+@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Add to Array List for Employees
-        final ArrayList<String> employeeArray = new ArrayList<>();
         employeeArray.add("Jack");
         employeeArray.add("Kenn");
         employeeArray.add("Britney");
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // CUSTOM METHOD FOR AVERAGE LENGTH
+
 
 
 
@@ -118,6 +119,22 @@ public class MainActivity extends AppCompatActivity {
     } // End of onCreate
 
 
+    // CUSTOM METHOD FOR AVERAGE LENGTH
+    public float getAverage(){
+
+        float count = 0;
+        float totalAverage = 0;
+
+        for (int i = 0; i < employeeArray.size(); i++) {
+            String character = employeeArray.get(i);
+            int charLength = character.length();
+            count = count + charLength;
+            totalAverage = count/employeeArray;
+            
+        }
+
+        return totalAverage;
+    }
 
 
 
