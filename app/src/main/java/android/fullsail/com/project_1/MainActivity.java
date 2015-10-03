@@ -76,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 numberOfEmployees.setText(number);
 
                 // Average
-
+                float total = getAverage();
+                averageLength.setText(Float.toString(total));
 
                 // Verifying User Text has been added.
                 for (String test : employeeArray )
@@ -130,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
             int charLength = character.length();
             count = count + charLength;
             totalAverage = count/employeeArray;
-            
+
         }
 
         return totalAverage;
