@@ -34,7 +34,7 @@
          android:layout_marginTop="70dp"
          android:layout_marginRight="110dp"
          android:layout_marginLeft="5dp"
-         android:textSize="20sp"
+         android:textSize="15sp"
          android:textColor="#FF0000"
          />
 
@@ -42,9 +42,9 @@
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:id="@+id/numberEmployee"
-         android:layout_marginTop="80dp"
+         android:layout_marginTop="70dp"
          android:layout_marginLeft="120dp"
-         android:textSize="20sp"
+         android:textSize="15sp"
          android:textColor="#000000"
          />
 
@@ -56,8 +56,18 @@
          android:layout_marginTop="140dp"
          android:layout_marginRight="110dp"
          android:layout_marginLeft="5dp"
-         android:textSize="20sp"
+         android:textSize="15sp"
          android:textColor="#FF0000"
+         />
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/averageNumber"
+         android:layout_marginTop="140dp"
+         android:layout_marginLeft="160dp"
+         android:textSize="150sp"
+         android:textColor="#000000"
          />
 
      <EditText
