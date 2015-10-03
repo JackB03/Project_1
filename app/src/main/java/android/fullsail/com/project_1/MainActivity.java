@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -15,16 +16,10 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    String addedText;
+
     // TAG
     String TAG = "Employee Project";
-
-    // Employees
-    Employee president = new Employee("Jack", "Bonner");
-    Employee vicePresident = new Employee("Kenn", "Williams");
-    Employee socialManager = new Employee("Britney", "Elbert");
-    Employee graphicDesigner = new Employee("Rick","Wallace");
-    Employee webDeveloper = new Employee("Elena","Martinez");
-
 
 
     @Override
@@ -33,17 +28,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Add to Array List for Employees
-        ArrayList<Employee> employeeArray = new ArrayList<>();
-        employeeArray.add(president);
-        employeeArray.add(vicePresident);
-        employeeArray.add(socialManager);
-        employeeArray.add(graphicDesigner);
-        employeeArray.add(webDeveloper);
+        final ArrayList<String> employeeArray = new ArrayList<>();
+        employeeArray.add("Jack");
+        employeeArray.add("Kenn");
+        employeeArray.add("Britney");
+        employeeArray.add("Rick");
+        employeeArray.add("Elena");
 
-        // Verified Employees are in Array List
-        for(Employee employees : employeeArray){
-            Log.i(TAG, employees.getFirstName() + " " + employees.getLastName());
-        }
+        // Verifying items in Array
+        for (String test : employeeArray )
+        Log.i(TAG,test.toString());
 
 
         // Setup for Number Of Employees
@@ -56,12 +50,47 @@ public class MainActivity extends AppCompatActivity {
         averageLength.setText("0");
 
         // Add & Find BUTTON SETUP
-        View theAddButton = findViewById(R.id.addButton);
-        theAddButton.setOnClickListener(?);
-        View theFindButton = findViewById(R.id.findButton);
-        theFindButton.setOnClickListener(?);
+        Button theAddButon = (Button) findViewById(R.id.addButton);
+        Button theFindButton = (Button) findViewById(R.id.findButton);
+
+        // Add Button OnClickListener
+        theAddButon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Setup Variables
+                final TextView currentTextLbl = (TextView) findViewById(R.id.currentText);
+                TextView numberOfEmployees = (TextView) findViewById(R.id.numberEmployee);
+                TextView averageLength = (TextView) findViewById(R.id.averageNumber);
+
+                // Adding "User Text" to Employee Array
+                addedText = currentTextLbl.getText().toString();
+                employeeArray.add(addedText);
+
+                // Change Number of Employees
+                String number = Integer.toString(employeeArray.size());
+                numberOfEmployees.setText(number);
+
+                // Average
 
 
+                // Verifying User Text has been added.
+                for (String test : employeeArray )
+                    Log.i(TAG,test.toString());
+
+            }
+        });
+
+
+        theFindButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText findText = (EditText) findViewById(R.id.findEmployee);
+
+                String currentText;
+                int currentInt;
+            }
+        });
 
 
 
