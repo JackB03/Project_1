@@ -57,6 +57,34 @@ public class MainActivity extends AppCompatActivity {
         Button theAddButon = (Button) findViewById(R.id.addButton);
         Button theFindButton = (Button) findViewById(R.id.findButton);
 
+
+        // Alert - USER INFORMATION - Add Employee
+        new AlertDialog.Builder(MainActivity.this)
+            .setTitle("How To Add Employees")
+            .setMessage("To add employees, simply click on 'Add Employee Name' and type in the employees name you would like to add. Then simply click the 'Add' button. ")
+            .setCancelable(false)
+            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    // Alert - USER INFORMATION - Find Employee
+                    new AlertDialog.Builder(MainActivity.this)
+                            .setTitle("How To Find Employees")
+                            .setMessage("To find an employee, simply type in 0-4. If more employees are added, feel free to use type higher numbers to find the empployee you are looking for.")
+                            .setCancelable(false)
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+
+                                }
+                            }).create().show();
+
+                }
+            }).create().show();
+
+
+
         // Add Button OnClickListener
         theAddButon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
             String character = employeeArray.get(i);
             int charLength = character.length();
             count = count + charLength;
-            totalAverage = count/employeeArray;
+            totalAverage = count/employeeArray.size();
 
         }
 
